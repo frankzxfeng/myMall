@@ -1,0 +1,49 @@
+@import "./normalize.css";
+
+/* 获取根元素并定义变量 */
+:root{
+  --color-text: #666;
+  --color-high-text: #ff5777;
+  --color-tint: #ff8198;
+  --color-backgound: #fff;
+  --font-size: 14px;
+  --line-height: 1.5;
+}
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial, Helvetica, sans-serif;
+  /* 禁止用户鼠标在页面上选择文字图片 */
+  user-select:none;
+  /* webkit时苹果浏览器引擎，tab点击，highlight背景高光 ，颜色用数值调节*/
+  -webkit-tab-highlight-color:transparent;
+  background:var(--color-background);
+  color:var(--color-text);
+  width: 100vw;
+}
+a{
+  color: var(--color-text);
+  text-decoration: none;
+}
+.clear-fix::after{
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.clear-fix{
+  zoom: 1;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
